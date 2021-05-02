@@ -1,0 +1,13 @@
+Use UART
+Check list serial
+$ ls -l /dev/serial*
+
+$ sudo nano /boot/config.txt
+Add two line:
+enable_uart=1
+core_freq=250
+
+$ sudo nano /boot/cmdline.txt
+remove the line: console=serial0,115200
+
+reboot, then check list serial
